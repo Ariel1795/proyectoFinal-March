@@ -1,0 +1,7 @@
+.footer-container {
+
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    color: lightblue;
+}
