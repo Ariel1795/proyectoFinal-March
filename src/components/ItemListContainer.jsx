@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react'
 import { db } from '../services/db'
 import LoadingSpinner from './LoadingSpinner'
 import '../styles/items.css'
+
+
 const ItemListContainer = () => {
   const [products, setProducts] = useState({});
   const { categoryId } = useParams();
@@ -23,7 +25,7 @@ const ItemListContainer = () => {
   }, [categoryId])
 
   return (
-    <Container className="mb-5">
+    <Container className="mb-5" >
       {products.length > 0 ?
         <Container >
           <DropdownButton
@@ -33,14 +35,17 @@ const ItemListContainer = () => {
             title="Categories"
           >
             <Dropdown.Item onClick={() => navigate('/')}>Todos</Dropdown.Item>
-            <Dropdown.Item onClick={() => navigate('/category/cañas')}>
-              Cañas
+            <Dropdown.Item onClick={() => navigate('/category/pesca')}>
+              Pesca
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => navigate('/category/termos')}>
-              Termos
+            <Dropdown.Item onClick={() => navigate('/category/camping')}>
+              Camping
             </Dropdown.Item>
             <Dropdown.Item onClick={() => navigate('/category/indumentaria')}>
               Indumentaria
+            </Dropdown.Item>
+            <Dropdown.Item onClick={() => navigate('/category/caza')}>
+              Caza
             </Dropdown.Item>
           </DropdownButton>
 
